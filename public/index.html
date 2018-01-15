@@ -5,14 +5,15 @@
         <meta name="viewport" content="width=device-width">
         <title>Alurapic</title>
         <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+       <link rel="stylesheet" href="css/bootstrap-theme.min.css">
         <script src="js/lib/angular.min.js"></script>
         <script src="js/main.js"></script>
+        <script src="js/controllers/fotos-controller.js"></script>
     </head>
-    <body>
+    <body ng-controller="FotosController">
         <div class="container">
             <h1 class="text-center">Alurapic</h1>
-            <img class="img-responsive center-block" src="https://images.prod.meredith.com/product/60f4b0b36b16935cce72879169c243c1/1501704452193/m/oliver-gal-shade-and-light-love-i-canvas-art">
-        </div> <!-- fim container -->        
+            <img class="img-responsive center-block" src="{{foto.url}}" alt="{{foto.titulo}}">
+        </div> <!-- fim container -->
     </body>
 </html>
