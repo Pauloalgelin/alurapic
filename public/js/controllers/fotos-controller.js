@@ -1,7 +1,12 @@
 angular.module('alurapic').controller('FotosController', FotosController);
-function FotosController ($scope){
-  $scope.foto = {
-    titulo: 'Sapato',
-    url: 'https://m.media-amazon.com/images/I/81qj31vwQwL._SX480_.jpg'
-  };
+function FotosController ($scope, $http){
+  $scope.fotos = [];
+
+  $http.get('v1/fotos')
+  .success(function(data){
+  	$scope.fotos = data;
+  })
+  .error(function(erro){
+  	console.log(erro);
+  });
 }
