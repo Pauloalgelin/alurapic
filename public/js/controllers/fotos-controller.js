@@ -1,4 +1,5 @@
 angular.module('alurapic').controller('FotosController', FotosController);
+
 function FotosController ($scope, $http){
   $scope.fotos = [];
 
